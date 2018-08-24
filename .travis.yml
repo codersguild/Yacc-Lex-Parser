@@ -4,5 +4,5 @@ language: cpp
 os:
   - linux
 install:
-  - apt-get install flex bison
+  - sudo apt-get install flex bison
 script: make
