@@ -3,6 +3,11 @@ sudo: required
 language: cpp
 os:
   - linux
+compiler:
+  - clang
+  - gcc
+  - g++
 install:
-  - sudo apt-get install flex bison
-script: make
+  - sudo apt-get install flex bison clang g++ gcc
+script: 
+  - sudo make
