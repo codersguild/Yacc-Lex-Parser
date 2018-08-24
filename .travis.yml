@@ -1,1 +1,10 @@
+dist: trusty
+sudo: required
 language: cpp
+os:
+  - linux
+install:
+  - apt-get update 
+  - apt-get upgrade 
+  - apt-get install flex bison gcc g++ clang clang++
+script: make
