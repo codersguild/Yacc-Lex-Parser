@@ -4,7 +4,5 @@ language: cpp
 os:
   - linux
 install:
-  - apt-get update 
-  - apt-get upgrade 
-  - apt-get install flex bison gcc g++ clang clang++
+  - apt-get install flex bison
 script: make
