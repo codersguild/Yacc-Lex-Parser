@@ -1,13 +1,18 @@
-dist: trusty
-sudo: required
 language: cpp
-os:
-  - linux
-compiler:
-  - clang
-  - gcc
-  - g++
-install:
-  - sudo apt-get install flex bison clang g++ gcc
+compiler: gcc
+dist: trusty
+os : linux
+
+before_install:
+  # C++14
+  - sudo add-apt-repository -y ppa:ubuntu-toolchain-r/test
+  - sudo apt-get update -qq
+
+install: 
+  # C++14
+  - sudo apt-get install -qq g++-6
+  - sudo update-alternatives --install /usr/bin/g++ g++ /usr/bin/g++-6 90
+  - sudo apt-get install flex bison clang g++-5
+
 script: 
   - sudo make
