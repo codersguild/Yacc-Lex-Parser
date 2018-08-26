@@ -1,9 +1,21 @@
 Simple Lex example in ```*.l``` file.
 ```C++
-a?(b|c)a* return TOKEN1;
-b?(a|c)b* return TOKEN2;
-c?(b|a)*c*  return TOKEN3;
-\"[^"\n]*["\n]  return FORMAT;
+%{
+#include "scanner.h"
+int nchar = 0, nwords = 0, nline = 0;
+%}
+
+%%
+b*(ab*a)*b*		return TOKEN1;
+(x*)			return TOKEN2;
+c?(b|a)*c*		return TOKEN3;
+^\+(([0-9])|(0)){2}	return COUNTRY_CODE;
+([0-9]{10})		return FULL_PHONE;
+%%
+
+int yywrap(void){
+	return 1;
+}
 ```
 In ```scanner.h```.
 
@@ -12,6 +24,8 @@ In ```scanner.h```.
 #define TOKEN2 2
 #define TOKEN3 3
 #define FORMAT 4
+#define COUNTRY_CODE 100000000
+#define FULL_PHONE 200000000
 ```
 
 In ```.cpp``` file.
