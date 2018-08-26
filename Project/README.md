@@ -5,3 +5,11 @@ b?(a|c)b* return TOKEN2;
 c?(b|a)*c*  return TOKEN3;
 \"[^"\n]*["\n]  return FORMAT;
 ```
+In ```scanner.h```.
+
+```C++
+#define TOKEN1 1
+#define TOKEN2 2
+#define TOKEN3 3
+#define FORMAT 4
+```
