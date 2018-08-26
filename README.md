@@ -3,7 +3,7 @@
 [![Build Status](https://travis-ci.org/SpawnTree/Yacc-Lex-Parser.svg?branch=master)](https://travis-ci.org/SpawnTree/Yacc-Lex-Parser)
 
 ```YACC``` & ```LEX``` based simple calculator application. Runs on C++. ```Context Free Grammar``` used in parser and ```Finite State Automaton``` as ```Regular Expression``` used. 
-```( & )``` not supported yet. Learn ```Compiler Design``` by coding.
+Learn ```Compiler Design``` by coding.
 
 ## Install & Run.
 
