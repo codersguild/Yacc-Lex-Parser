@@ -45,6 +45,7 @@ exp    	: term                  { $$ = $1;		}
        	| exp '-' term          { $$ = $1 - $3;	}
        	| exp '*' term          { $$ = $1 * $3;	}
        	| exp '/' term          { $$ = $1 / $3;	}
+       	| '(' exp ')' 			{ $$ = $2; }
        	;
 
 term   	: number                { $$ = $1;	}
