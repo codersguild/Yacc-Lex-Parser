@@ -20,5 +20,3 @@ Windows : (Make sure ```nmake``` is on ```env``` path and ```cmake``` is install
 > nmake
 > cls && simple_cfg.exe
 ```
-
-### Thanks and Courtesy of IIT-KGP, IISc Banglore. 
